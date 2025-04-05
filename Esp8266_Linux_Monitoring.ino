@@ -10,9 +10,9 @@
 #define OLED_RESET    -1
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-const char* ssid = "MyServer";
-const char* password = "23052008";
-const char* serverIp = "192.168.1.72";
+const char* ssid = "your wifi";
+const char* password = "your pass wifi";
+const char* serverIp = "your ip server";
 
 void setup() {
     Serial.begin(115200);
@@ -77,7 +77,7 @@ void loop() {
 
                 display.clearDisplay();
                 display.setCursor(0, 0);
-                display.println("MyServer Monitoring");
+                display.println("Server Monitoring");
                 display.println("--------------------");
 
                 display.printf("CPU: %s%% / %sC\n", cpu_str, temp_str);
