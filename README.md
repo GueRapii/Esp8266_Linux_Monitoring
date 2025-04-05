@@ -16,7 +16,7 @@ This project helps you build a small IoT device using an ESP8266 and OLED displa
 
 ### 1. Requirements
 - ESP8266 board (e.g., NodeMCU, Wemos D1 Mini)
-- OLED display (SSD1306 128x64 I2C)
+- OLED display 0.98Inch (SSD1306 128x64 I2C)
 - Arduino IDE
 
 ### 2. Arduino IDE Configuration
