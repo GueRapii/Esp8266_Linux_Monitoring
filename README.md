@@ -28,10 +28,10 @@ This project helps you build a small IoT device using an ESP8266 and OLED displa
   Then go to `Tools > Board > Boards Manager`, search for **esp8266**, and install it.
 
 - Select your board:  
-  `Tools > Board > NodeMCU 1.0 (ESP-12E Module)` (or sesuai board kamu)
+  `Tools > Board > NodeMCU 1.0 (ESP-12E Module)` (or according to your board model)
 
 ### 3. Install Required Libraries
-Go to `Sketch > Include Library > Manage Libraries`, dan cari dan install:
+Open `Sketch > Include Library > Manage Libraries`, then search and install:
 - **Adafruit GFX Library**
 - **Adafruit SSD1306**
 - **ArduinoJson**
@@ -39,15 +39,15 @@ Go to `Sketch > Include Library > Manage Libraries`, dan cari dan install:
 - **ESP8266WiFi**
 
 ### 4. Upload Sketch
-Edit bagian berikut di kodenya:
+Edit the following part of the code:
 
 ```cpp
 const char* ssid = "your wifi";
-const char* password = "your pass wifi";
-const char* serverIp = "your ip server";
+const char* password = "your wifi password";
+const char* serverIp = "your server IP";
 ```
 
-Lalu upload ke ESP8266. Pastikan server Linux kamu sudah berjalan dengan API `/status` yang disiapkan di bagian bawah.
+Then upload the code to your ESP8266. Make sure your Linux server is running the `/status` API described below.
 
 ---
 
@@ -57,8 +57,8 @@ Lalu upload ke ESP8266. Pastikan server Linux kamu sudah berjalan dengan API `/s
 - Python 3
 - Pip (Python package installer)
 
-### 2. Install Required Python Libraries
-Buka terminal dan jalankan:
+### 2. Install Python Dependencies
+Open your terminal and run:
 
 ```bash
 sudo apt update
@@ -66,15 +66,17 @@ sudo apt install python3-pip
 pip3 install flask psutil
 ```
 
-### 3. Jalankan Server API
+### 3. Run the Monitoring Server
 
-Buat file baru bernama `server_monitor.py` dan isi dengan kode server yang tersedia di repository ini. Lalu jalankan dengan:
+Create a new file called `server_monitor.py` and paste the server code available in this repository.
+
+Run it with:
 
 ```bash
 python3 server_monitor.py
 ```
 
-Pastikan port `5000` terbuka di firewall jika kamu mengakses dari jaringan lain.
+Ensure that port `5000` is open in your firewall if you're accessing it from another device on the network.
 
 ---
 
@@ -96,4 +98,4 @@ Pastikan port `5000` terbuka di firewall jika kamu mengakses dari jaringan lain.
 ## License
 
 This project is licensed under the MIT License.  
-Feel free to use and modify it as you like.
+Feel free to use, share, and modify it as needed.
